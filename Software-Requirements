@@ -1,0 +1,64 @@
+
+## 1. Software Requirements
+
+| Component | Purpose | Recommended Version |
+|-----------|---------|---------------------|
+| **Arduino IDE** | Code writing & uploading to board | **v2.3.2** (latest stable) |
+| **Python** | AI chatbot logic / NLP integration | **Python 3.9–3.11** |
+| **PySerial** | Python ↔ Arduino serial communication | Latest (`pip install pyserial`) |
+| **SpeechRecognition** | Voice input capture | Latest (`pip install SpeechRecognition`) |
+| **PyAudio** | Microphone input handling | Compatible with Python version |
+| **NLTK / Transformers** | Chatbot AI model | Latest stable release |
+| **Arduino Libraries** | Hardware control | Board-specific (Servo, Ultrasonic, etc.) |
+
+---
+
+## 2. Port Number & Communication
+
+- **Default Communication Port (Serial):**
+  - **Windows:** Usually `COM3`, `COM4`, `COM5` (Check in *Arduino IDE → Tools → Port*)
+  - **Linux/Mac:** `/dev/ttyUSB0` or `/dev/ttyACM0`
+
+- **Baud Rate:**  
+  - `9600` (basic projects)  
+  - `115200` (high-speed data)
+
+- **Python Side Example:**
+```python
+import serial
+ser = serial.Serial('COM3', 9600)  # Match port & baud rate with Arduino settings
+Port Check:
+
+Arduino IDE → Tools → Port → Select Connected Device
+
+3. Version Compatibility
+Module/Tool	Compatible With
+Arduino Uno	Arduino IDE v1.8.x & v2.x
+Arduino Mega	Arduino IDE v1.8.x & v2.x
+ESP32/ESP8266	Arduino IDE v2.x + board manager update
+Python 3.9+	PySerial, SpeechRecognition, Transformers
+
+4. Extra Software for Chatbot Features
+Google Speech API – Voice to text
+
+OpenAI API / Local NLP Model – Text response generation
+
+Optional: Node.js + Socket.io (for web interface)
+
+5. Quick Installation Commands
+bash
+Always show details
+
+Copy
+# Install Python dependencies
+pip install pyserial SpeechRecognition pyaudio nltk transformers
+
+# (Optional) For ESP boards in Arduino IDE
+# Go to: File → Preferences → Additional Board Manager URLs
+# Add: https://dl.espressif.com/dl/package_esp32_index.json
+6. Project Notes
+Ensure Python version is between 3.9 and 3.11 for compatibility.
+
+Always match the Arduino baud rate with Python code settings.
+
+Keep drivers for your Arduino board installed for smooth serial communication.
