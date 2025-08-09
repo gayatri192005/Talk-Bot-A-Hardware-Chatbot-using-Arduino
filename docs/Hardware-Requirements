@@ -1,0 +1,71 @@
+# Arduino Hardware Chatbot – Hardware Requirements
+
+This document outlines the **hardware components, wiring details, and physical setup** required for the Arduino-based Hardware Chatbot project.
+
+---
+
+## 1. Core Components
+
+| Component | Quantity | Purpose |
+|-----------|----------|---------|
+| **Arduino Board** (Uno / Mega / ESP32) | 1 | Main microcontroller to control hardware |
+| **USB Cable** | 1 | Power supply & code upload |
+| **Microphone Module** (e.g., MAX9814) | 1 | Captures voice input |
+| **Speaker / Buzzer** | 1 | Audio output / notifications |
+| **Servo Motor** (e.g., SG90) | 1–2 | For movement / gestures |
+| **Ultrasonic Sensor** (HC-SR04) | 1 | Distance detection |
+| **LEDs** (RGB or single color) | 2–3 | Visual response indicators |
+| **Resistors** (220Ω, 1kΩ) | As needed | Current control for LEDs/sensors |
+| **Breadboard** | 1 | Prototyping circuit |
+| **Jumper Wires** (Male-Male, Male-Female) | 20+ | Connections between components |
+
+---
+
+## 2. Optional Components
+
+| Component | Purpose |
+|-----------|---------|
+| **ESP8266/ESP32** | For WiFi-enabled chatbot |
+| **OLED/LCD Display (16x2 or 20x4)** | Show text/chat responses |
+| **Relay Module** | Control high-voltage devices |
+| **Camera Module** | For vision-based chatbot features |
+
+---
+
+## 3. Wiring Guidelines
+
+- **Power Supply:** Use Arduino’s 5V pin for most sensors, 3.3V for ESP-based boards.
+- **Ground Connections:** Always connect all components to common GND.
+- **Signal Pins:**
+  - Servo Motor → Digital pins (e.g., D9)
+  - Ultrasonic Sensor → Trigger & Echo pins (e.g., D7, D8)
+  - Microphone → Analog pin (e.g., A0)
+  - LEDs → Digital pins (e.g., D3, D4, D5)
+- **Serial Communication:** Connect via USB for Python integration.
+
+---
+
+## 4. Estimated Cost
+
+| Item | Approx. Price (INR) |
+|------|--------------------|
+| Arduino Uno | ₹500–₹700 |
+| Microphone Module | ₹200–₹300 |
+| Servo Motor | ₹150–₹250 each |
+| Ultrasonic Sensor | ₹120–₹180 |
+| Breadboard + Jumper Wires | ₹200–₹300 |
+| Misc. Components | ₹100–₹200 |
+
+---
+
+## 5. Assembly Tips
+
+- Use a **breadboard** for initial prototyping before soldering.
+- Keep wires short to reduce signal interference.
+- Label wires or use color codes for easy debugging.
+- If using motors or servos, provide **external power** to avoid Arduino resets.
+- For permanent setup, design a PCB or use a project box.
+
+---
+
+**Note:** The exact hardware list may vary depending on the complexity of your chatbot (voice-only, voice + movement, or AI + IoT integration).
