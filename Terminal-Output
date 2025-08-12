@@ -1,0 +1,36 @@
+[INFO] Connecting to Arduino on COM3 at 9600 baud...
+[OK] Connection established with Arduino ✅
+
+[INFO] Initializing voice recognition module...
+[OK] Voice recognition ready 🎤
+
+[INFO] Starting chatbot interaction...
+--------------------------------------------------------
+User: (🎤 Speaks) "Hello chatbot, how are you?"
+[VOICE DETECTED] -> Processing speech-to-text...
+[TEXT RECOGNIZED] -> "Hello chatbot, how are you?"
+
+[AI RESPONSE] -> "I'm doing great! How can I assist you today?"
+[INFO] Sending response text to Arduino for audio playback...
+
+[ARDUINO CONFIRMATION] Response received, playing audio 📢
+--------------------------------------------------------
+User: (🎤 Speaks) "What's the weather like today?"
+[VOICE DETECTED] -> Processing speech-to-text...
+[TEXT RECOGNIZED] -> "What's the weather like today?"
+
+[AI RESPONSE] -> "Today is sunny with a high of 32°C. Perfect day for a walk!"
+[INFO] Sending response text to Arduino...
+
+[ARDUINO CONFIRMATION] Response received, playing audio 📢
+--------------------------------------------------------
+User: (🎤 Speaks) "Goodbye."
+[VOICE DETECTED] -> Processing speech-to-text...
+[TEXT RECOGNIZED] -> "Goodbye."
+
+[AI RESPONSE] -> "Goodbye! Have a great day!"
+[INFO] Sending response text to Arduino...
+
+[ARDUINO CONFIRMATION] Audio playback done. Ending session 📴
+--------------------------------------------------------
+[SESSION CLOSED]
